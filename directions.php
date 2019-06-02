@@ -1,0 +1,6 @@
+<?php
+
+define('CORE_DIR', ROOT_DIR . 'core' . DIRECTORY_SEPARATOR);
+define('ROUTER_DIR', ROOT_DIR . 'router' . DIRECTORY_SEPARATOR);
+define('STATIC_DIR', ROOT_DIR . 'static' . DIRECTORY_SEPARATOR);
+
