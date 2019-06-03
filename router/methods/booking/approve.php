@@ -16,6 +16,14 @@ if (!count($booking)) {
     $core->addError('not_found', true, ['booking_id']);
 }
 
+
+$date_booking = strtotime($booking["date_booking"]);
+
+if ($date_booking >= time()) {
+    $core->addError('access_denied', true, ['booking_id']);
+}
+
+
 $place = get_place_by_id($booking['place_id'], $user_id, $user_scopes);
 
 if (!count($place)) {
